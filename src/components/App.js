@@ -1,29 +1,36 @@
 import React, { Component } from "react";
 import PokeList from "./PokeList";
+import DetailView from "./DetailView";
+import Pokemon from "../Pokemon";
+import axios from "axios";
 import "./styles/App.css";
-import { render } from "react-dom";
-import "/src/index.html";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      pokemon: {}
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick(id) {
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then(response => {
+        const pokemon = new Pokemon(response.data);
+
+        this.setState({ pokemon });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
     return (
       <div className="App">
-        <PokeList />
-      </div>
-    );
-  }
-}
-
-class HTMLTitle extends Component {
-  render() {
-    return (
-      <div className="HTMLTitle">
-        <h1> Choose, create and have fun! </h1>
+        <PokeList handleOnClick={this.handleOnClick} />
+        <DetailView pokemon={this.state.pokemon} />
       </div>
     );
   }
