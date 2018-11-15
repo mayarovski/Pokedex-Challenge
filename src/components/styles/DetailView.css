@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300, 400);
+@font-family: 'Roboto Condensed';
+@charset "UTF-8";
+
+.detail-view {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  background-color: #fad61d;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+}
+
+.sprite-image {
+  width: 50%;
+  height: 150px;
+  margin: 10px auto;
+  background-color: #ff6347;
+  border: 4px solid #2e2e2e;
+  border-radius: 10px;
+  border-collapse: collapse;
+  color: #1b1b1b;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+}
+
+.data-wrapper {
+  width: 80%;
+  height: 110px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #585858;
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+
+.data-name {
+  margin: 0 0 5px;
+}
+
+.data-char {
+  font-size: 20px;
+  font-family: Roboto Condensed, Calibri;
+  font-synthesis: initial;
+}
