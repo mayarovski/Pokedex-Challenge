@@ -21,7 +21,7 @@
   margin: 10px auto;
   background-color: #ff6347;
   border: 4px solid #2e2e2e;
-  border-radius: 10px;
+  border-radius: 50%;
   border-collapse: collapse;
   color: #1b1b1b;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
